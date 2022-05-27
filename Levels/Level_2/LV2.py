@@ -1,9 +1,8 @@
 import os
 import pygame
 
-size = screenWidth, screenHeight = 800, 700
+size = 800, 700
 screen = pygame.display.set_mode(size)
-white = 0,0,0
 
 class Level_2():
     def __init__(self) -> None:

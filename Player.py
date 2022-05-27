@@ -4,7 +4,7 @@ import  os
 class MainPlayer():
     def __init__(self, screen, player) -> None:
         self.player = player
-        self.vel = 3
+        self.vel = 5
         self.playerImg = pg.image.load(os.path.join('Levels\\Level_1\\img','stand.png'))
         self.screen = screen
         self.draw()
