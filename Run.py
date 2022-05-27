@@ -1,4 +1,4 @@
-import pygame as pg, sys
+import pygame as pg, sys, os
 from Stage import GameStage
 
 class initial():
@@ -8,8 +8,12 @@ class initial():
         self.white = 255,255,255
 
 initial()
+clock = pg.time.Clock()
 while True:
     for event in pg.event.get():
         if event.type ==  pg.QUIT: sys.exit()
+
+    clock.tick(30)
     GameStage(1)
     pg.display.update() 
+    
