@@ -5,7 +5,7 @@ class GameStage():
     def __init__(self, levelNumber):
         self.stage = levelNumber
         self.stageManager()
-    
+        
     def stageManager(self):
         if self.stage == 0:
             pass                  
