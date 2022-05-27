@@ -1,11 +1,13 @@
 import os
-import pygame
+import pygame as pg
+from Player import MainPlayer
 
 size = screenWidth, screenHeight = 800, 700
-screen = pygame.display.set_mode(size)
+screen = pg.display.set_mode(size)
 white = 0,0,0
+player = pg.Rect(230, 129, 35, 60)
 
 class Level_1():
     def __init__(self) -> None:
-        #pygame.image.load(os.path.join('IMG','LV1_BACKGROUND.png'))
-        screen.blit(pygame.image.load(os.path.join('Levels\\Level_1\\img','bg.png')), (0,0))
+        screen.blit(pg.image.load(os.path.join('Levels\\Level_1\\img','bg.png')), (0,0))
+        MainPlayer(screen, player)
