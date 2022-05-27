@@ -11,5 +11,5 @@ initial()
 while True:
     for event in pg.event.get():
         if event.type ==  pg.QUIT: sys.exit()
-    GameStage(1)  
+    GameStage(1)
     pg.display.update() 

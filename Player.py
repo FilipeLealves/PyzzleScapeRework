@@ -2,10 +2,10 @@ import pygame as pg
 import  os
 
 class MainPlayer():
-    def __init__(self, screen, player) -> None:
+    def __init__(self, screen, player, playerImg) -> None:
         self.player = player
         self.vel = 5
-        self.playerImg = pg.image.load(os.path.join('Levels\\Level_1\\img','stand.png'))
+        self.playerImg = playerImg
         self.screen = screen
         self.draw()
 
