@@ -3,6 +3,7 @@ import os
 
 load = pg.image.load
 path = 'Player\\img'
+pathSound = 'Player\\sound'
 walkCount = 0
 
 class MainPlayer():

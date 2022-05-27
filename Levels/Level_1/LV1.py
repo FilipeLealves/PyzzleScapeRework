@@ -20,6 +20,8 @@ class Level_1():
     def __init__(self) -> None:
         self.bg_on = pg.image.load(os.path.join('Levels\\Level_1\\img','bg_on.png'))
         self.bg_off = pg.image.load(os.path.join('Levels\\Level_1\\img','bg_off.png'))
+        self.bg_black = pg.image.load(os.path.join('Levels\\Level_1\\img','full_black-2.png'))
+        self.chairImg = pg.image.load(os.path.join('Levels\\Level_1\\img','chair.png'))
         self.walls()
         self.events()
     
@@ -65,15 +67,20 @@ class Level_1():
             switchNum = 0
             click.play()
 
+        
+
         if switchLight == True:
             screen.blit(self.bg_on, (0,0))
+            screen.blit(self.chairImg,(550, 193))
         else:
             screen.blit(self.bg_off, (0,0))
+            screen.blit(self.chairImg,(550, 193))
+            screen.blit(self.bg_black, (player.x - 780, player.y - 660))
         
         if switchNum > 10:
             switchNum = 10
 
-        self.chairImg = pg.image.load(os.path.join('Levels\\Level_1\\img','chair.png'))
+        
 
         if player.colliderect(self.chair):
             #self.standBack = pg.image.load(os.path.join('Levels\\Level_1\\img','stand_back.png'))
@@ -85,6 +92,6 @@ class Level_1():
         else:
             self.showPlayer(False)
 
-        screen.blit(self.chairImg,(550, 193))
+        
 
     
